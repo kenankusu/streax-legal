@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Datenschutzerklärung – Streax</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      font-size: 16px;
+      line-height: 1.75;
+      color: #1a1a1a;
+      background: #fff;
+      padding: 2rem 1rem 4rem;
+    }
+
+    main {
+      max-width: 680px;
+      margin: 0 auto;
+    }
+
+    header {
+      border-bottom: 1px solid #e5e5e5;
+      padding-bottom: 1.5rem;
+      margin-bottom: 2.5rem;
+    }
+
+    header h1 {
+      font-size: 24px;
+      font-weight: 600;
+      margin-bottom: 0.25rem;
+    }
+
+    header p {
+      color: #666;
+      font-size: 14px;
+    }
+
+    h2 {
+      font-size: 17px;
+      font-weight: 600;
+      margin: 2.5rem 0 0.75rem;
+      padding-bottom: 0.4rem;
+      border-bottom: 1px solid #e5e5e5;
+    }
+
+    p { margin-bottom: 0.75rem; }
+    p:last-child { margin-bottom: 0; }
+
+    ul {
+      margin: 0.5rem 0 0.75rem 1.25rem;
+    }
+
+    ul li { margin-bottom: 0.3rem; }
+
+    .note {
+      background: #f7f7f5;
+      border-left: 3px solid #e0a800;
+      border-radius: 0 6px 6px 0;
+      padding: 0.75rem 1rem;
+      margin: 0.75rem 0;
+      font-size: 14px;
+    }
+
+    .badge {
+      display: inline-block;
+      font-size: 11px;
+      font-weight: 500;
+      padding: 2px 8px;
+      border-radius: 999px;
+      background: #e8f0fe;
+      color: #1a56c4;
+      vertical-align: middle;
+      margin-left: 6px;
+    }
+
+    .contact-box {
+      background: #f7f7f5;
+      border: 1px solid #e5e5e5;
+      border-radius: 8px;
+      padding: 1rem 1.25rem;
+      margin: 0.75rem 0;
+      font-size: 15px;
+    }
+
+    .contact-box a { color: #1a56c4; text-decoration: none; }
+    .contact-box a:hover { text-decoration: underline; }
+
+    .rights-list {
+      list-style: none;
+      margin: 0.5rem 0;
+      padding: 0;
+    }
+
+    .rights-list li {
+      padding: 0.6rem 0;
+      border-bottom: 1px solid #e5e5e5;
+      font-size: 15px;
+    }
+
+    .rights-list li:last-child { border-bottom: none; }
+    .rights-list li strong { display: block; font-weight: 600; font-size: 14px; }
+    .rights-list li span { color: #555; font-size: 13px; }
+
+    footer {
+      margin-top: 3rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid #e5e5e5;
+      font-size: 13px;
+      color: #888;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      body { background: #111; color: #e8e8e8; }
+      header, h2, footer { border-color: #2a2a2a; }
+      .rights-list li { border-color: #2a2a2a; }
+      .note { background: #1e1c14; border-left-color: #c98a00; }
+      .contact-box { background: #1a1a1a; border-color: #2a2a2a; }
+      .badge { background: #1a2d5a; color: #7aabff; }
+      header p, .rights-list li span { color: #999; }
+      .contact-box a { color: #7aabff; }
+    }
+
+    @media (max-width: 480px) {
+      body { font-size: 15px; padding: 1.25rem 1rem 3rem; }
+      header h1 { font-size: 20px; }
+    }
+  </style>
+</head>
+<body>
+<main>
+
+  <header>
+    <h1>Datenschutzerklärung</h1>
+    <p>Streax &ndash; Sport-Tracking-App &middot; Stand: Mai 2026</p>
+  </header>
+
+  <h2>1. Verantwortlicher</h2>
+  <p>Verantwortlich für die Verarbeitung deiner personenbezogenen Daten im Sinne der DSGVO ist:</p>
+  <div class="contact-box">
+    <strong>[Name / Organisation eintragen]</strong><br>
+    E-Mail: <a href="mailto:kenan.kusu@gmail.com">kenan.kusu@gmail.com</a><br>
+    GitHub: <a href="https://github.com/kenankusu/streax" target="_blank" rel="noopener">github.com/kenankusu/streax</a>
+  </div>
+  <p>Bei Fragen zum Datenschutz oder zur Ausübung deiner Rechte erreichst du uns jederzeit per E-Mail.</p>
+
+  <h2>2. Welche Daten wir erheben und warum</h2>
+
+  <p><strong>Stammdaten</strong> <span class="badge">Art. 6 Abs. 1 lit. b DSGVO</span></p>
+  <p>Diese Daten benötigen wir, um dir ein Konto anzulegen und die App bereitzustellen:</p>
+  <ul>
+    <li>E-Mail-Adresse</li>
+    <li>Passwort (verschlüsselt über Firebase Authentication – wir sehen es nie im Klartext)</li>
+    <li>Vorname, Nachname, Benutzername</li>
+  </ul>
+
+  <p><strong>Aktivitätsdaten</strong> <span class="badge">Art. 6 Abs. 1 lit. b DSGVO</span></p>
+  <p>Diese Daten entstehen, wenn du eine Aktivität einträgst:</p>
+  <ul>
+    <li>Sportart, Dauer, Distanz</li>
+    <li>Intensität (locker / moderat / hart)</li>
+    <li>Stimmung und Freitext-Caption</li>
+    <li>Optional: Fotos zur Aktivität</li>
+  </ul>
+  <p><em>Standort- oder GPS-Daten werden von Streax nicht erfasst.</em></p>
+
+  <p><strong>Medien</strong> <span class="badge">Art. 6 Abs. 1 lit. b DSGVO</span></p>
+  <ul>
+    <li>Profilbild (hochgeladen auf Firebase Storage)</li>
+    <li>Aktivitätsfotos (werden automatisch auf max. 800&thinsp;px und 80&thinsp;% Qualität komprimiert)</li>
+  </ul>
+
+  <p><strong>Soziale Daten</strong> <span class="badge">Art. 6 Abs. 1 lit. b DSGVO</span></p>
+  <ul>
+    <li>Freundesliste und Freundschaftsanfragen (Sender, Empfänger, Status)</li>
+    <li>Streak-Werte (aktueller Streak, maximaler Streak, letzter Aktivitätszeitpunkt)</li>
+    <li>Trainingsziele (Typ, Zielwert, Fortschritt)</li>
+    <li>@-Mentions in Captions (mit gespeicherter Nutzer-ID)</li>
+  </ul>
+
+  <h2>3. Besondere Kategorien: Gesundheitsdaten</h2>
+  <div class="note">
+    Körpergewicht, Körpergröße und Geburtsdatum gelten nach DSGVO als Gesundheitsdaten – eine besonders sensible Datenkategorie. Wir verarbeiten sie <strong>nur, wenn du ausdrücklich einwilligst</strong> (Art. 9 Abs. 2 lit. a DSGVO).
+  </div>
+  <p>Diese Angaben sind vollständig freiwillig. Du wirst beim Einrichten deines Profils gefragt, ob du sie angeben möchtest. Deine Einwilligung kannst du jederzeit in den App-Einstellungen widerrufen – deine Gesundheitsdaten werden dann sofort gelöscht.</p>
+
+  <h2>4. Datenweitergabe und Auftragsverarbeiter</h2>
+  <p>Wir geben deine Daten nicht für Werbezwecke weiter und verkaufen sie nicht. Für den Betrieb der App nutzen wir ausschließlich folgenden Dienstleister:</p>
+
+  <p><strong>Google Ireland Ltd. (Firebase)</strong> <span class="badge">Art. 28 DSGVO</span></p>
+  <ul>
+    <li><strong>Firebase Authentication</strong> – sichere Anmeldung und E-Mail-Verifizierung</li>
+    <li><strong>Cloud Firestore</strong> – Speicherung von Profilen, Aktivitäten, Zielen und Freundschaften</li>
+    <li><strong>Firebase Storage</strong> – Profilbilder und Aktivitätsfotos</li>
+  </ul>
+  <p>Serverstandort: EU (europe-west1, Belgien). Mit Google besteht ein Auftragsverarbeitungsvertrag gemäß Art. 28 DSGVO.</p>
+
+  <p><strong>Was andere Nutzer von dir sehen können:</strong></p>
+  <ul>
+    <li>Öffentliches Profil: Vorname, Nachname, Benutzername, Profilbild und Streak-Anzahl</li>
+    <li>Alle eingetragenen Aktivitäten (Sportart, Dauer, Distanz, Stimmung, Intensität, Caption, Fotos)</li>
+    <li>Wer eine Aktivität geliket hat (Profilbilder sichtbar)</li>
+    <li>Reposts: andere Nutzer können deine Aktivitäten in ihrem Feed teilen</li>
+  </ul>
+
+  <h2>5. Speicherdauer</h2>
+  <p>Deine Daten werden gespeichert, solange du ein aktives Konto bei Streax hast. Wenn du dein Konto löschst, werden alle Daten sofort und vollständig entfernt:</p>
+  <ul>
+    <li>Alle Firestore-Dokumente (Profil, Aktivitäten, Ziele, Freundschaften)</li>
+    <li>Alle Dateien im Firebase Storage (Profilbild, Aktivitätsfotos)</li>
+    <li>Dein Firebase Authentication-Account</li>
+  </ul>
+  <p>Ausstehende Freundschaftsanfragen werden automatisch bereinigt, sobald eines der beteiligten Konten gelöscht wird. Die Kontolöschung ist direkt in der App unter <em>Einstellungen → Konto löschen</em> möglich.</p>
+
+  <h2>6. Deine Rechte</h2>
+  <p>Als betroffene Person stehen dir folgende Rechte zu. Wende dich dafür an <a href="mailto:kenan.kusu@gmail.com">kenan.kusu@gmail.com</a>:</p>
+
+  <ul class="rights-list">
+    <li>
+      <strong>Auskunft (Art. 15 DSGVO)</strong>
+      <span>Du kannst jederzeit erfragen, welche Daten wir über dich gespeichert haben.</span>
+    </li>
+    <li>
+      <strong>Berichtigung (Art. 16 DSGVO)</strong>
+      <span>Falsche Daten können direkt in der App oder per Anfrage korrigiert werden.</span>
+    </li>
+    <li>
+      <strong>Löschung (Art. 17 DSGVO)</strong>
+      <span>Über <em>Konto löschen</em> in der App werden alle deine Daten sofort vollständig entfernt.</span>
+    </li>
+    <li>
+      <strong>Einschränkung der Verarbeitung (Art. 18 DSGVO)</strong>
+      <span>Du kannst verlangen, dass wir deine Daten nur noch speichern, aber nicht weiter verwenden.</span>
+    </li>
+    <li>
+      <strong>Datenübertragbarkeit (Art. 20 DSGVO)</strong>
+      <span>Auf Anfrage stellen wir dir deine Daten in einem maschinenlesbaren Format (JSON) bereit.</span>
+    </li>
+    <li>
+      <strong>Widerspruch (Art. 21 DSGVO)</strong>
+      <span>Du kannst der Verarbeitung deiner Daten widersprechen, sofern sie auf einem berechtigten Interesse beruht.</span>
+    </li>
+    <li>
+      <strong>Widerruf der Einwilligung (Art. 7 Abs. 3 DSGVO)</strong>
+      <span>Die Einwilligung zur Verarbeitung von Gesundheitsdaten kannst du jederzeit in den App-Einstellungen widerrufen.</span>
+    </li>
+    <li>
+      <strong>Beschwerderecht (Art. 77 DSGVO)</strong>
+      <span>Du hast das Recht, dich bei einer Datenschutz-Aufsichtsbehörde zu beschweren – in Deutschland z.&thinsp;B. beim Bundesbeauftragten für den Datenschutz und die Informationsfreiheit (BfDI) oder der zuständigen Landesbehörde.</span>
+    </li>
+  </ul>
+
+  <p style="margin-top:1rem;"><strong>Mindestalter:</strong> Streax ist ausschließlich für Personen ab 16 Jahren zugänglich. Bei der Registrierung bestätigst du dein Alter aktiv. Wir erheben wissentlich keine Daten von Kindern unter 16 Jahren.</p>
+
+  <h2>7. Änderungen dieser Datenschutzerklärung</h2>
+  <p>Bei wesentlichen Änderungen informieren wir dich per E-Mail oder über eine Benachrichtigung in der App, bevor die Änderungen wirksam werden. Das Datum der letzten Aktualisierung steht immer oben auf dieser Seite.</p>
+
+  <footer>
+    <p>Streax &middot; Stand: Mai 2026 &middot; <a href="mailto:kenan.kusu@gmail.com" style="color:#888;">kenan.kusu@gmail.com</a></p>
+  </footer>
+
+</main>
+</body>
+</html>
