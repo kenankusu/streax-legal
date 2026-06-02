@@ -15,9 +15,9 @@ jobs:
         uses: SamKirkland/FTP-Deploy-Action@v4.3.5
         with:
           protocol: sftp
-          server: ${{ secrets.FTP_HOST }}
+          server: 5020558697.ssh.w2.strato.hosting
           port: 22
-          username: ${{ secrets.FTP_USER }}
+          username: su111688
           password: ${{ secrets.FTP_PASS }}
           local-dir: ./
           server-dir: /html/
