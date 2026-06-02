@@ -18,7 +18,7 @@ jobs:
           server: 5020558697.ssh.w2.strato.hosting
           port: 22
           username: su111688
-          password: ${{ secrets.FTP_PASS }}
+          password: ${{ secrets.STRATO_SHARED_HOSTING }}
           local-dir: ./
           server-dir: /html/
           exclude: |
