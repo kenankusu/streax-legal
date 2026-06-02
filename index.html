@@ -1,1 +1,305 @@
-<meta http-equiv="refresh" content="0; url=datenschutz.html">
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Streax – Social Fitness</title>
+<link rel="stylesheet" href="styles.css"/>
+<script src="cookie.js"></script>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a class="nav-logo" href="#">
+    <img src="streax_logo_final_30x-8.png" alt="Streax"/>
+  </a>
+  <div class="nav-links">
+    <a href="#features">Features</a>
+    <a href="#screenshots">App</a>
+    <a href="#download">Download</a>
+  </div>
+  <a href="#download" class="nav-cta">Jetzt herunterladen</a>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-glow"></div>
+  <div class="hero-glow2"></div>
+  <div class="hero-inner">
+    <div class="hero-text reveal">
+      <div class="hero-badge">
+        <div class="hero-badge-dot"></div>
+        Social Fitness
+      </div>
+      <h1 class="hero-title">
+        Train.<br/>
+        <span class="grad-text">Teile.</span><br/>
+        Dominiere.
+      </h1>
+      <p class="hero-sub">
+        Streax verbindet dein Training mit deinem sozialen Umfeld. Logge Aktivitäten, bau deinen Streak auf und übertriff deine Freunde im Leaderboard.
+      </p>
+      <div class="hero-stats">
+        <div class="stat-item">
+          <div class="stat-num">10K+</div>
+          <div class="stat-label">Aktive Nutzer</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-num">50K+</div>
+          <div class="stat-label">Aktivitäten geloggt</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-num">4.9★</div>
+          <div class="stat-label">App Store Rating</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-visual reveal" style="transition-delay:0.2s">
+      <div class="phone-wrap">
+        <!-- Floating card left -->
+        <div class="floating-card card-streak">
+          <div class="card-small-label">Dein Streak</div>
+          <div class="card-big-value">🔥 14</div>
+          <div class="card-meta">Tage in Folge</div>
+        </div>
+        <!-- Phone -->
+        <div class="phone-screen">
+          <img src="Screenshot_2026-05-27_203135.png" alt="Streax App Homescreen"/>
+        </div>
+        <img class="phone-frame" src="Iphone-Frame-PNG-HD.png" alt="iPhone Frame"/>
+        <div class="phone-glow"></div>
+        <!-- Floating card right -->
+        <div class="floating-card card-leaderboard">
+          <div class="card-small-label">Leaderboard</div>
+          <div class="rank-list">
+            <div class="rank-row">
+              <span class="rank-num">1</span>
+              <div class="rank-avatar">UE</div>
+              <span class="rank-name">Du</span>
+              <span class="rank-streak">🔥 14</span>
+            </div>
+            <div class="rank-row">
+              <span class="rank-num">2</span>
+              <div class="rank-avatar" style="background: rgba(255,255,255,0.15); color: var(--muted);">KK</div>
+              <span class="rank-name">Kenan</span>
+              <span class="rank-streak">🔥 12</span>
+            </div>
+            <div class="rank-row">
+              <span class="rank-num">3</span>
+              <div class="rank-avatar" style="background: rgba(160,100,30,0.3); color: #c07840;">LE</div>
+              <span class="rank-name">Lattenross</span>
+              <span class="rank-streak">🔥 9</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- NOTIFY -->
+<section class="notify-section">
+  <div class="notify-inner reveal">
+    <div class="notify-badge">
+      <div class="notify-badge-dot"></div>
+      Bald verfügbar
+    </div>
+    <h2 class="notify-title">Als Erster <span class="grad-text">dabei sein</span></h2>
+    <p class="notify-sub">Trag dich ein und wir benachrichtigen dich, sobald Streax im App Store und Google Play verfügbar ist.</p>
+    <form class="notify-form" onsubmit="handleNotify(event)">
+      <input class="notify-input" type="email" name="email" placeholder="deine@email.de" required/>
+      <button class="notify-btn" type="submit">Benachrichtigen</button>
+    </form>
+    <div class="notify-success">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#00c8a0" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+      Eingetragen! Wir melden uns.
+    </div>
+    <p class="notify-note">Kein Spam. Nur ein einziges Benachrichtigungs-Mail.</p>
+  </div>
+</section>
+
+<!-- FEATURES -->
+<section class="section features-section" id="features">
+  <div class="features-header reveal">
+    <div class="section-label">Was Streax bietet</div>
+    <h2 class="section-title">Fitness trifft<br/><span style="background:var(--grad);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">Community</span></h2>
+    <p class="section-sub">Alles, was du brauchst, um konsequent zu trainieren – und deine Freunde dabei zu überholen.</p>
+  </div>
+  <div class="features-grid">
+    <div class="feature-card featured reveal">
+      <div class="feature-card-glow glow-teal"></div>
+      <div class="feature-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="url(#grad1)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <defs><linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#1e74f0"/><stop offset="50%" stop-color="#00c8a0"/><stop offset="100%" stop-color="#a0e840"/></linearGradient></defs>
+          <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/>
+        </svg>
+      </div>
+      <h3 class="feature-title">Streak-System</h3>
+      <p class="feature-desc">Bleib konsequent und bau deinen Streak auf. Monatliche Resets geben jedem die Chance, neu durchzustarten – Booster-Items halten deinen Lauf am Leben.</p>
+    </div>
+    <div class="feature-card reveal" style="transition-delay:0.1s">
+      <div class="feature-card-glow glow-blue"></div>
+      <div class="feature-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="url(#grad2)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <defs><linearGradient id="grad2" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#1e74f0"/><stop offset="100%" stop-color="#00c8a0"/></linearGradient></defs>
+          <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+        </svg>
+      </div>
+      <h3 class="feature-title">Social Feed</h3>
+      <p class="feature-desc">Teile Aktivitäten, reagiere auf Posts deiner Freunde und lass dich von deren Fortschritt motivieren.</p>
+    </div>
+    <div class="feature-card reveal" style="transition-delay:0.2s">
+      <div class="feature-card-glow glow-teal"></div>
+      <div class="feature-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="url(#grad4)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <defs><linearGradient id="grad4" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#1e74f0"/><stop offset="100%" stop-color="#a0e840"/></linearGradient></defs>
+          <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/>
+        </svg>
+      </div>
+      <h3 class="feature-title">Journal</h3>
+      <p class="feature-desc">Kalender-, Monats- und Jahresansicht deiner Aktivitäten. Erkenne Muster und zelebriere Fortschritt.</p>
+    </div>
+    <div class="feature-card featured reveal" style="transition-delay:0.25s">
+      <div class="feature-card-glow glow-blue"></div>
+      <div class="feature-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="url(#grad5)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <defs><linearGradient id="grad5" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#1e74f0"/><stop offset="100%" stop-color="#00c8a0"/></linearGradient></defs>
+          <circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/>
+        </svg>
+      </div>
+      <h3 class="feature-title">Ziele & Habits</h3>
+      <p class="feature-desc">Definiere wöchentliche Trainingsziele nach Sportart und behalte deinen Fortschritt jederzeit im Blick.</p>
+    </div>
+  </div>
+</section>
+
+<!-- SCREENSHOTS -->
+<section class="section screenshots-section" id="screenshots">
+  <div class="screens-inner">
+    <div class="screens-header reveal">
+      <div class="section-label">App in Aktion</div>
+      <h2 class="section-title">Designed für<br/><span style="background:var(--grad);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">Performance</span></h2>
+    </div>
+    <div class="screens-row">
+      <div class="screen-item reveal">
+        <div class="screen-phone">
+          <img src="Screenshot_2026-05-27_203135.png" alt="Home Feed"/>
+        </div>
+        <div class="screen-caption">Home & Feed</div>
+      </div>
+      <div class="screen-item center reveal" style="transition-delay:0.15s">
+        <div class="screen-badge">Live</div>
+        <div class="screen-phone">
+          <img src="Screenshot_2026-05-27_204234.png" alt="Leaderboard"/>
+        </div>
+        <div class="screen-caption">Leaderboard</div>
+      </div>
+      <div class="screen-item reveal" style="transition-delay:0.3s">
+        <div class="screen-phone">
+          <img src="Screenshot_2026-05-27_203156.png" alt="Journal"/>
+        </div>
+        <div class="screen-caption">Dein Journal</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section class="section how-section">
+  <div class="how-inner">
+    <div class="how-header reveal">
+      <div class="section-label">So einfach geht's</div>
+      <h2 class="section-title">In 3 Schritten<br/><span style="background:var(--grad);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">zum Streak</span></h2>
+    </div>
+    <div class="steps">
+      <div class="step reveal">
+        <div class="step-num">1</div>
+        <h3 class="step-title">Aktivität loggen</h3>
+        <p class="step-desc">Wähle deine Sportart, gib Dauer und Intensität an – und füge optional ein Foto hinzu.</p>
+      </div>
+      <div class="step reveal" style="transition-delay:0.15s">
+        <div class="step-num">2</div>
+        <h3 class="step-title">Freunde herausfordern</h3>
+        <p class="step-desc">Teile deine Aktivität im Feed. Reagiere auf Posts deiner Freunde und bau gemeinsam Streaks auf.</p>
+      </div>
+      <div class="step reveal" style="transition-delay:0.3s">
+        <div class="step-num">3</div>
+        <h3 class="step-title">Leaderboard dominieren</h3>
+        <p class="step-desc">Steig die wöchentliche Rangliste hoch. Verdiene Items, halt deinen Streak am Leben – und starte jeden Monat neu.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA / DOWNLOAD -->
+<section class="cta-section" id="download">
+  <div class="cta-glow"></div>
+  <div class="cta-inner reveal">
+    <img class="cta-logo" src="streax_logo_final_30x-8.png" alt="Streax Logo"/>
+    <h2 class="cta-title">Bereit,<br/><span style="background:var(--grad);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">durchzustarten?</span></h2>
+    <p class="cta-sub">Trag dich ein und wir benachrichtigen dich, sobald Streax im App Store und Google Play verfügbar ist.</p>
+    <form class="notify-form" onsubmit="handleNotify(event)">
+      <input class="notify-input" type="email" name="email" placeholder="deine@email.de" required/>
+      <button class="notify-btn" type="submit">Eintragen</button>
+    </form>
+    <div class="notify-success">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#00c8a0" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+      Eingetragen! Wir melden uns.
+    </div>
+    <p class="notify-note">Kein Spam. Nur ein einziges Benachrichtigungs-Mail.</p>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <img src="streax_logo_final_30x-8.png" alt="Streax"/>
+  <div class="footer-links">
+    <a href="datenschutz.html">Datenschutz</a>
+    <a href="impressum.html">Impressum</a>
+    <a href="kontakt.html">Kontakt</a>
+  </div>
+  <div class="footer-copy">© 2026 Streax. Alle Rechte vorbehalten.</div>
+</footer>
+
+<script>
+  async function handleNotify(e) {
+    e.preventDefault();
+    const form = e.target;
+    const btn = form.querySelector('button');
+    btn.disabled = true;
+    btn.textContent = '...';
+    try {
+      const res = await fetch('https://formspree.io/f/maqzweby', {
+        method: 'POST',
+        headers: { 'Accept': 'application/json' },
+        body: new FormData(form)
+      });
+      if (res.ok) {
+        form.style.display = 'none';
+        form.nextElementSibling.classList.add('show');
+      } else {
+        btn.disabled = false;
+        btn.textContent = 'Eintragen';
+        alert('Etwas ist schiefgelaufen. Bitte versuch es nochmal.');
+      }
+    } catch {
+      btn.disabled = false;
+      btn.textContent = 'Eintragen';
+      alert('Etwas ist schiefgelaufen. Bitte versuch es nochmal.');
+    }
+  }
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        e.target.classList.add('visible');
+      }
+    });
+  }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+
+  document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+</script>
+</body>
+</html>

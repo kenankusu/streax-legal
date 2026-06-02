@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Kontakt – Streax</title>
+<script src="cookie.js"></script>
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  :root {
+    --bg: #080810; --bg2: #0e0e1a; --bg3: #13131f;
+    --border: rgba(255,255,255,0.07);
+    --text: #f0f0f8; --muted: rgba(240,240,248,0.55); --dim: rgba(240,240,248,0.25);
+    --grad: linear-gradient(135deg, #1e74f0 0%, #00c8a0 55%, #a0e840 100%);
+  }
+  html { scroll-behavior: smooth; }
+  body { background: var(--bg); color: var(--text); font-family: 'Barlow', sans-serif; font-weight: 400; line-height: 1.7; }
+
+  nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 20px 60px;
+    backdrop-filter: blur(20px);
+    background: rgba(8,8,16,0.8);
+    border-bottom: 1px solid var(--border);
+  }
+  .nav-logo img { height: 30px; filter: brightness(1.1); }
+  .nav-back {
+    display: flex; align-items: center; gap: 8px;
+    color: var(--muted); text-decoration: none; font-size: 14px; font-weight: 500;
+    transition: color 0.2s;
+  }
+  .nav-back:hover { color: var(--text); }
+  .nav-back svg { width: 16px; height: 16px; }
+
+  .page-header {
+    padding: 160px 60px 60px; max-width: 1100px; margin: 0 auto;
+    border-bottom: 1px solid var(--border);
+  }
+  .page-label {
+    font-size: 12px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase;
+    background: var(--grad); -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; background-clip: text;
+    margin-bottom: 16px; display: block;
+  }
+  .page-title {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 64px; font-weight: 900; line-height: 0.93;
+    text-transform: uppercase; letter-spacing: -0.01em; margin-bottom: 20px;
+  }
+  .page-sub { font-size: 18px; color: var(--muted); max-width: 520px; line-height: 1.65; }
+
+  .content {
+    max-width: 1100px; margin: 0 auto;
+    padding: 64px 60px 120px;
+    display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: start;
+  }
+
+  /* CONTACT CARDS */
+  .contact-cards { display: flex; flex-direction: column; gap: 16px; }
+  .contact-card {
+    background: var(--bg2); border: 1px solid var(--border);
+    border-radius: 16px; padding: 28px 28px;
+    display: flex; gap: 20px; align-items: flex-start;
+    transition: border-color 0.3s, background 0.3s;
+  }
+  .contact-card:hover { border-color: rgba(0,200,160,0.25); background: var(--bg3); }
+  .contact-icon {
+    width: 48px; height: 48px; flex-shrink: 0;
+    border-radius: 12px; background: rgba(0,200,160,0.1);
+    border: 1px solid rgba(0,200,160,0.2);
+    display: flex; align-items: center; justify-content: center;
+  }
+  .contact-icon svg { width: 22px; height: 22px; }
+  .contact-text {}
+  .contact-type {
+    font-size: 11px; font-weight: 700; letter-spacing: 0.1em;
+    text-transform: uppercase; color: var(--dim); margin-bottom: 4px;
+  }
+  .contact-value {
+    font-size: 16px; font-weight: 600; color: var(--text); margin-bottom: 4px;
+  }
+  .contact-value a { color: var(--text); text-decoration: none; }
+  .contact-value a:hover { color: #00c8a0; }
+  .contact-desc { font-size: 13px; color: var(--dim); line-height: 1.5; }
+
+  .contact-topics { margin-top: 40px; }
+  .topics-label {
+    font-size: 12px; font-weight: 700; letter-spacing: 0.1em;
+    text-transform: uppercase; color: var(--dim); margin-bottom: 16px;
+  }
+  .topic-tags { display: flex; flex-wrap: wrap; gap: 8px; }
+  .topic-tag {
+    background: rgba(255,255,255,0.04); border: 1px solid var(--border);
+    border-radius: 100px; padding: 6px 14px;
+    font-size: 13px; color: var(--muted); font-weight: 500;
+  }
+
+  /* FORM SIDE */
+  .form-side {}
+  .form-title {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 28px; font-weight: 800; text-transform: uppercase;
+    letter-spacing: 0.01em; margin-bottom: 8px;
+  }
+  .form-sub { font-size: 14px; color: var(--muted); margin-bottom: 36px; line-height: 1.6; }
+
+  .form-group { margin-bottom: 20px; }
+  label {
+    display: block; font-size: 12px; font-weight: 700;
+    letter-spacing: 0.08em; text-transform: uppercase;
+    color: var(--dim); margin-bottom: 8px;
+  }
+  input[type="text"], input[type="email"], textarea, select {
+    width: 100%; background: var(--bg2);
+    border: 1px solid var(--border); border-radius: 10px;
+    padding: 14px 16px; font-family: 'Barlow', sans-serif;
+    font-size: 15px; color: var(--text);
+    transition: border-color 0.2s, background 0.2s;
+    outline: none; resize: none;
+  }
+  textarea { resize: vertical; }
+  input[type="text"]:focus, input[type="email"]:focus,
+  textarea:focus, select:focus {
+    border-color: rgba(0,200,160,0.4);
+    background: var(--bg3);
+  }
+  input::placeholder, textarea::placeholder { color: var(--dim); }
+  select { cursor: pointer; appearance: none; }
+  select option { background: #13131f; }
+  textarea { min-height: 140px; }
+
+  .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+
+  .btn-submit {
+    width: 100%;
+    background: var(--grad);
+    color: #000; font-family: 'Barlow', sans-serif;
+    font-weight: 700; font-size: 15px; letter-spacing: 0.04em;
+    padding: 16px 28px; border-radius: 10px; border: none;
+    cursor: pointer; margin-top: 8px;
+    transition: opacity 0.2s, transform 0.2s;
+  }
+  .btn-submit:hover { opacity: 0.88; transform: translateY(-1px); }
+
+  .form-note {
+    text-align: center; font-size: 12px; color: var(--dim);
+    margin-top: 16px; line-height: 1.6;
+  }
+  .form-note a { color: #00c8a0; text-decoration: none; }
+
+  /* SUCCESS */
+  .success-msg {
+    display: none; text-align: center; padding: 40px 0;
+  }
+  .success-icon {
+    width: 64px; height: 64px; border-radius: 50%;
+    background: rgba(0,200,160,0.1); border: 1px solid rgba(0,200,160,0.3);
+    display: flex; align-items: center; justify-content: center;
+    margin: 0 auto 20px;
+  }
+  .success-icon svg { width: 28px; height: 28px; stroke: #00c8a0; }
+  .success-title {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 28px; font-weight: 800; text-transform: uppercase;
+    margin-bottom: 10px;
+  }
+  .success-sub { font-size: 15px; color: var(--muted); }
+
+  footer {
+    padding: 36px 60px; border-top: 1px solid var(--border);
+    display: flex; align-items: center; justify-content: space-between;
+  }
+  footer img { height: 22px; opacity: 0.4; }
+  .footer-links { display: flex; gap: 24px; }
+  .footer-links a { font-size: 13px; color: var(--dim); text-decoration: none; transition: color 0.2s; }
+  .footer-links a:hover { color: var(--muted); }
+  .footer-copy { font-size: 13px; color: var(--dim); }
+
+  @media (max-width: 860px) {
+    nav { padding: 16px 20px; }
+    .page-header { padding: 120px 20px 40px; }
+    .page-title { font-size: 44px; }
+    .content { grid-template-columns: 1fr; gap: 48px; padding: 40px 20px 80px; }
+    .form-row { grid-template-columns: 1fr; }
+    footer { flex-direction: column; gap: 16px; padding: 28px 20px; text-align: center; }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <a class="nav-logo" href="index.html"><img src="streax_logo_final_30x-8.png" alt="Streax"/></a>
+  <a class="nav-back" href="index.html">
+    <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M10 12L6 8l4-4"/></svg>
+    Zurück zur Startseite
+  </a>
+</nav>
+
+<div class="page-header">
+  <span class="page-label">Schreib uns</span>
+  <h1 class="page-title">Kontakt</h1>
+  <p class="page-sub">Fragen, Feedback oder ein Bug-Report? Wir antworten schnellstmöglich.</p>
+</div>
+
+<div class="content">
+  <!-- LEFT: contact info -->
+  <div>
+    <div class="contact-cards">
+      <div class="contact-card">
+        <div class="contact-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="url(#cg1)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <defs><linearGradient id="cg1" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#1e74f0"/><stop offset="100%" stop-color="#00c8a0"/></linearGradient></defs>
+            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/>
+          </svg>
+        </div>
+        <div class="contact-text">
+          <div class="contact-type">E-Mail</div>
+          <div class="contact-value"><a href="mailto:support@streax.app">support@streax.app</a></div>
+          <div class="contact-desc">Für alle Anfragen – Support, Presse, Kooperationen</div>
+        </div>
+      </div>
+      <div class="contact-card">
+        <div class="contact-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="url(#cg2)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <defs><linearGradient id="cg2" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#00c8a0"/><stop offset="100%" stop-color="#a0e840"/></linearGradient></defs>
+            <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/>
+          </svg>
+        </div>
+        <div class="contact-text">
+          <div class="contact-type">GitHub</div>
+          <div class="contact-value"><a href="https://github.com/kenankusu/streax" target="_blank">github.com/kenankusu/streax</a></div>
+          <div class="contact-desc">Bug Reports und Feature Requests über GitHub Issues</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="contact-topics">
+      <div class="topics-label">Häufige Themen</div>
+      <div class="topic-tags">
+        <span class="topic-tag">Bug melden</span>
+        <span class="topic-tag">Feature-Wunsch</span>
+        <span class="topic-tag">Account-Hilfe</span>
+        <span class="topic-tag">Datenschutz</span>
+        <span class="topic-tag">Presse</span>
+        <span class="topic-tag">Kooperation</span>
+        <span class="topic-tag">Allgemeines</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- RIGHT: form -->
+  <div class="form-side">
+    <h2 class="form-title">Nachricht senden</h2>
+    <p class="form-sub">Füll das Formular aus – wir melden uns so schnell wie möglich bei dir.</p>
+
+    <form id="contactForm" onsubmit="submitForm(event)">
+      <div class="form-row">
+        <div class="form-group">
+          <label for="fname">Vorname</label>
+          <input type="text" id="fname" name="vorname" placeholder="Max" required/>
+        </div>
+        <div class="form-group">
+          <label for="lname">Nachname</label>
+          <input type="text" id="lname" name="nachname" placeholder="Mustermann"/>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="email">E-Mail</label>
+        <input type="email" id="email" name="email" placeholder="deine@email.de" required/>
+      </div>
+      <div class="form-group">
+        <label for="topic">Thema</label>
+        <select id="topic" name="thema">
+          <option value="">Bitte auswählen…</option>
+          <option>Bug melden</option>
+          <option>Feature-Wunsch</option>
+          <option>Account-Hilfe</option>
+          <option>Datenschutz-Anfrage</option>
+          <option>Presse / Medien</option>
+          <option>Kooperation</option>
+          <option>Allgemeines</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="message">Nachricht</label>
+        <textarea id="message" name="nachricht" placeholder="Beschreibe dein Anliegen…" required></textarea>
+      </div>
+      <button class="btn-submit" type="submit">Nachricht senden</button>
+      <p class="form-note">
+        Mit dem Absenden stimmst du unserer <a href="datenschutz.html">Datenschutzerklärung</a> zu.<br/>
+        Wir geben deine Daten nicht an Dritte weiter.
+      </p>
+    </form>
+
+    <div class="success-msg" id="successMsg">
+      <div class="success-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+      </div>
+      <div class="success-title">Nachricht gesendet!</div>
+      <p class="success-sub">Danke für deine Nachricht. Wir melden uns in der Regel innerhalb von 1–2 Werktagen.</p>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <img src="streax_logo_final_30x-8.png" alt="Streax"/>
+  <div class="footer-links">
+    <a href="datenschutz.html">Datenschutz</a>
+    <a href="impressum.html">Impressum</a>
+    <a href="kontakt.html">Kontakt</a>
+  </div>
+  <div class="footer-copy">© 2026 Streax</div>
+</footer>
+
+<script>
+async function submitForm(e) {
+  e.preventDefault();
+  const form = e.target;
+  const btn = form.querySelector('.btn-submit');
+  btn.disabled = true;
+  btn.textContent = '…';
+  try {
+    const res = await fetch('https://formspree.io/f/xvznpkwd', {
+      method: 'POST',
+      headers: { 'Accept': 'application/json' },
+      body: new FormData(form)
+    });
+    if (res.ok) {
+      form.style.display = 'none';
+      document.getElementById('successMsg').style.display = 'block';
+    } else {
+      btn.disabled = false;
+      btn.textContent = 'Nachricht senden';
+      alert('Etwas ist schiefgelaufen. Bitte versuch es nochmal.');
+    }
+  } catch {
+    btn.disabled = false;
+    btn.textContent = 'Nachricht senden';
+    alert('Etwas ist schiefgelaufen. Bitte versuch es nochmal.');
+  }
+}
+</script>
+</body>
+</html>
