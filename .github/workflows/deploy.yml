@@ -14,12 +14,7 @@ jobs:
       - name: Deploy via SFTP
         run: |
           sudo apt-get install -y lftp
-          lftp -u "$SFTP_USER","$SFTP_PASS" \
-            -e "set sftp:auto-confirm yes; \
-                mirror --reverse --delete \
-                --exclude .git/ --exclude .github/ \
-                . /html/; quit" \
-            sftp://5020558697.ssh.w2.strato.hosting
+          lftp -u "$SFTP_USER","$SFTP_PASS" -e "set sftp:auto-confirm yes; mirror --reverse --delete --exclude .git/ --exclude .github/ . /html/; quit" sftp://5020558697.ssh.w2.strato.hosting
         env:
           SFTP_USER: su111688
           SFTP_PASS: ${{ secrets.STRATO_SHARED_HOSTING }}
