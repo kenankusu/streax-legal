@@ -245,7 +245,7 @@ nav {
   text-align: center;
 }
 .notify-inner {
-  max-width: 560px;
+  max-width: 900px;
   margin: 0 auto;
 }
 .notify-badge {
@@ -268,6 +268,7 @@ nav {
   text-transform: uppercase;
   line-height: 1; letter-spacing: -0.01em;
   white-space: nowrap;
+  text-align: center;
   margin-bottom: 12px;
 }
 .notify-title .grad-text {
@@ -477,13 +478,14 @@ nav {
   background: radial-gradient(ellipse, rgba(0,200,160,0.1) 0%, transparent 70%);
   pointer-events: none;
 }
-.cta-inner { position: relative; z-index: 1; max-width: 700px; margin: 0 auto; }
+.cta-inner { position: relative; z-index: 1; max-width: 900px; margin: 0 auto; text-align: center; }
 .cta-logo { height: 48px; margin: 0 auto 36px; display: block; filter: brightness(1.1); }
 .cta-title {
   font-family: 'Barlow Condensed', sans-serif;
   font-size: 72px; font-weight: 900;
   line-height: 0.92; text-transform: uppercase;
   letter-spacing: -0.02em; margin-bottom: 24px;
+  text-align: center;
 }
 .cta-sub { font-size: 18px; color: var(--muted); margin-bottom: 48px; line-height: 1.65; }
 .store-btns { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
