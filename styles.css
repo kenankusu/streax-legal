@@ -63,6 +63,15 @@ nav {
 }
 .nav-cta:hover { opacity: 0.88; transform: translateY(-1px); }
 
+.appstore-badge {
+  display: inline-block;
+  margin-bottom: 24px;
+  text-align: left;
+  transition: opacity 0.2s, transform 0.2s;
+}
+.appstore-badge img { height: 140px; display: block; }
+.appstore-badge:hover { opacity: 0.85; transform: translateY(-1px); }
+
 /* HERO */
 .hero {
   min-height: 100vh;
@@ -126,7 +135,7 @@ nav {
 .hero-sub {
   font-size: 19px; color: var(--muted);
   line-height: 1.65; max-width: 480px;
-  margin-bottom: 44px; font-weight: 400;
+  margin-bottom: 28px; font-weight: 400;
 }
 .hero-actions { display: flex; gap: 14px; align-items: center; flex-wrap: wrap; }
 .btn-primary {
