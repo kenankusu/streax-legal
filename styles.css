@@ -65,11 +65,12 @@ nav {
 
 .appstore-badge {
   display: inline-block;
-  margin-bottom: 24px;
+  margin-bottom: 12px;
+  margin-right: auto;
   text-align: left;
   transition: opacity 0.2s, transform 0.2s;
 }
-.appstore-badge img { height: 140px; display: block; }
+.appstore-badge img { height: 100px; width: auto; display: block; }
 .appstore-badge:hover { opacity: 0.85; transform: translateY(-1px); }
 
 /* HERO */
@@ -135,7 +136,7 @@ nav {
 .hero-sub {
   font-size: 19px; color: var(--muted);
   line-height: 1.65; max-width: 480px;
-  margin-bottom: 28px; font-weight: 400;
+  margin-bottom: 36px; font-weight: 400;
 }
 .hero-actions { display: flex; gap: 14px; align-items: center; flex-wrap: wrap; }
 .btn-primary {
@@ -552,6 +553,7 @@ footer img { height: 24px; opacity: 0.5; }
   .hero { padding: 100px 24px 60px; }
   .hero-inner { grid-template-columns: 1fr; gap: 60px; }
   .hero-title { font-size: 56px; }
+  .appstore-badge img { height: 100px; }
   .features-grid { grid-template-columns: 1fr; }
   .feature-card.featured { grid-column: span 1; }
   .screens-row { grid-template-columns: 1fr; }
